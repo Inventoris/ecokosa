@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<svg width="200" height="120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>logo</title>
+ <defs>
+  <symbol height="24" id="svg_3" width="24" xmlns="http://www.w3.org/2000/svg">
+   <path d="m14,21l0,-3.23l2,0l0,3.23l-2,0zm-6,0l0,-4l-6.12,0l3.97,-6l-1.93,0l5.08,-7.28l5.07,7.28l-1.92,0l3.98,6l-6.13,0l0,4l-2,0zm9.05,-4l-3.47,-5.22l1.97,0l-3.07,-4.4l2.52,-3.65l5.07,7.27l-1.92,0l3.98,6l-5.08,0z"/>
+  </symbol>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <use fill="#1e2e4d" id="svg_4" transform="matrix(4.5 0 0 4.5 0 0)" x="-1.81" xlink:href="#svg_3" y="0"/>
+  <use fill="#1e2e4d" id="svg_5" transform="matrix(4.5 0 0 4.5 0 0)" x="8.78" xlink:href="#svg_3" y="1.82"/>
+  <use fill="#1e2e4d" id="svg_6" transform="matrix(4.5 0 0 4.5 0 0)" x="22.11" xlink:href="#svg_3" y="-1.06"/>
+ </g>
+</svg>

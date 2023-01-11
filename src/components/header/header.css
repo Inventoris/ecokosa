@@ -1,0 +1,76 @@
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 130px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: height .5s ease;
+}
+
+.header_narrowed {
+  height: 100px;
+}
+
+.header__logo-wrapper {
+  display: flex;
+  gap: 25px;
+  margin-left: 25px;
+}
+
+.header__logo {
+  width: 200px;
+  animation: paws-through-forest infinite 4s ease-out 1s;
+  background-image: url('../../images/white-background.svg');
+  background-size: contain;
+  transition: width .5s ease;
+}
+
+.header_narrowed .header__logo {
+  width: 140px;
+}
+
+@keyframes paws-through-forest {
+  25% {
+    background-image: url('../../images/paws-step-1.svg');
+  }
+  50% {
+    background-image: url('../../images/paws-step-2.svg');
+  }
+  75% {
+    background-image: url('../../images/paws-step-3.svg');
+  }
+  100% {
+    background-image: url('../../images/white-background.svg');
+  }
+}
+
+.header__site-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  user-select: none;
+}
+
+.header__site-name p {
+  font-size: 22px;
+  margin: 0;
+}
+
+.header__navigation {
+  margin-right: 80px;
+}
+
+.header__navigation__list {
+  display: flex;
+  gap: 50px;
+  color: #FFFFFF;
+  background-color: #1E2E4D;
+  margin: 0;
+  padding: 15px 25px;
+}
