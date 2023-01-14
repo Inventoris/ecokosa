@@ -5,6 +5,11 @@ body {
   padding-top: 130px;
 }
 
+h2 {
+  font-size: 25px;
+  font-weight: 400;
+}
+
 li {
   list-style: none;
 }

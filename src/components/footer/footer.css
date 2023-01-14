@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #1E2E4D;
+}
+
+.footer__copyright-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  padding-left: 50px;
+}
+
+.footer__copyright-message {
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.footer__navigation {
+  padding-right: 50px;
+}
+
+.footer__navigation-list {
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}

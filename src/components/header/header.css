@@ -13,18 +13,18 @@
 }
 
 .header_narrowed {
-  height: 100px;
+  height: 80px;
 }
 
 .header__logo-wrapper {
   display: flex;
   gap: 25px;
-  margin-left: 25px;
+  padding-left: 50px;
 }
 
 .header__logo {
   width: 200px;
-  animation: paws-through-forest infinite 4s ease-out 1s;
+  animation: paws-through-forest infinite 4s ease-out .5s;
   background-image: url('../../images/white-background.svg');
   background-size: contain;
   transition: width .5s ease;
@@ -57,16 +57,21 @@
   user-select: none;
 }
 
-.header__site-name p {
-  font-size: 22px;
+.site-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+.site-subtitle {
+  font-size: 18px;
   margin: 0;
 }
 
 .header__navigation {
-  margin-right: 80px;
+  padding-right: 100px;
 }
 
-.header__navigation__list {
+.header__navigation-list {
   display: flex;
   gap: 50px;
   color: #FFFFFF;

@@ -21,12 +21,12 @@ function Header() {
       <div className='header__logo-wrapper'>
         <img src={logo} className='header__logo' alt='Тёмно-синие деревья, между стволами следы лап животных' />
         <div className='header__site-name'>
-          <p>ЭкоКоса</p>
-          <p>Гайд по Куршской косе</p>
+          <p className='site-title'>ЭкоКоса</p>
+          <p className='site-subtitle'>Гайд по Куршской косе</p>
         </div>
       </div>
-      <nav className="header__navigation">
-        <ul className="header__navigation__list">
+      <nav className='header__navigation'>
+        <ul className='header__navigation-list'>
           <li><Link to='/about'>О косе</Link></li>
           <li><Link to='/sights'>Где гулять</Link></li>
           <li><Link to='/forbidden-places'>Куда нельзя</Link></li>
@@ -34,7 +34,7 @@ function Header() {
         </ul>
     </nav>
     </header>
-   )
+  )
 }
 
 export default Header
