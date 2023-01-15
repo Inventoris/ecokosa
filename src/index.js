@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import App from './App'
-import About from './components/articles/About'
-import Sights from './components/articles/Sights'
-import ForbiddenPlaces from './components/articles/ForbiddenPlaces'
-import Prices from './components/articles/Prices'
+import Home from './pages/home/Home.js'
+import Article from './pages/article/Article.js'
+import pathToAbout from './guides/about.md'
+import pathToSights from './guides/sights.md'
+import pathToRestrictions from './guides/restrictions.md'
+import pathToPrices from './guides/prices.md'
 import reportWebVitals from './reportWebVitals'
 import './index.css'
 
@@ -14,14 +15,14 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App />} />
-        <Route path='about' element={<About />} />
-        <Route path='sights' element={<Sights />} />
-        <Route path='forbidden-places' element={<ForbiddenPlaces />} />
-        <Route path='prices' element={<Prices />} />
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<Article path={pathToAbout} />} />
+        <Route path="sights" element={<Article path={pathToSights} />} />
+        <Route path="restrictions" element={<Article path={pathToRestrictions} />} />
+        <Route path="prices" element={<Article path={pathToPrices} />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
 )
 
-reportWebVitals();
+reportWebVitals()

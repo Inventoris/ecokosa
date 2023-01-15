@@ -1,0 +1,28 @@
+body {
+  font-family: "Marmelad", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding-top: 130px;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: transparent;
+  transition: text-decoration-color .125s ease;
+  color: #FFFFFF;
+}
+
+a:hover {
+  text-decoration-color: #FFFFFF;
+  transition: text-decoration-color .125s ease;
+}
