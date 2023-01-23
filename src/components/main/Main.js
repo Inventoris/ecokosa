@@ -1,48 +1,24 @@
-import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import Post from '../post/Post'
+import Facts from '../facts/Facts'
 import './Main.css'
 
 function Main() {
-  // const facts = [
-  //   "1",
-  //   "2",
-  //   "3",
-  //   "4",
-  //   "5",
-  //   "6",
-  //   "7",
-  //   "8",
-  //   "9",
-  //   "10"
-  // ]
-
-  // useEffect(() => {
-  //   const fact = document.querySelector(".fact")
-  //   const refreshIcon = document.querySelector(".refresh-icon")
-
-  //   refreshIcon.addEventListener("click", () => {
-  //     fact.textContent = `${facts[Math.floor(Math.random() * facts.length)]}`
-  //   })
-  // })
-
   return (
     <main className="main">
       <section className="main__intro">
         <h2 className="main__intro-marquee">Ветер Балтики гуляет на просторе, Ветки сосен – как натянутые струны, Гонит волны растревоженное море, Тихо дремлют зачарованные дюны. Куршская коса, Николай Балуев, 2012 год. Ветер Балтики гуляет на просторе, Ветки сосен – как натянутые струны, Гонит волны растревоженное море, Тихо дремлют зачарованные дюны. Куршская коса, Николай Балуев, 2012 год. Ветер Балтики гуляет на просторе, Ветки сосен – как натянутые струны, Гонит волны растревоженное море, Тихо дремлют зачарованные дюны. Куршская коса, Николай Балуев, 2012 год. Ветер Балтики гуляет на просторе, Ветки сосен – как натянутые струны, Гонит волны растревоженное море, Тихо дремлют зачарованные дюны. Куршская коса, Николай Балуев, 2012 год.</h2>
         <div className="main__intro-knowledge">
-          <Link to="about" className="main__random-article">
-            <img />
-            <h2></h2>
-          </Link>
-          <div className="main__facts">
-            <h2 className="main__facts-header">Интересные факты</h2>
-            <p className="main__fact-content">Куршская коса очень тонкая</p>
-          </div>
+          <Post />
+          <Facts />
         </div>
+      </section>
+      <section className="main__map">
+        <h2>Карта с достопримечательностями Куршской косы</h2>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A249ee6e414b40df0f4d3c52af49cf49c222b350f2179c0b554c458cd56ac370f&amp;source=constructor" width="1000" height="500" frameBorder="0"></iframe>
       </section>
       <section className="main__mission">
         <h2 className="main__mission-header">Миссия</h2>
-        <p className="main__mission-message">ЭкоКоса — это некоммерческий open-source проект с четырьмя гайдами, призванный помочь туристам правильно и интересно посетить Куршскую косу.</p>
+        <p className="main__mission-message">ЭкоКоса — это open-source проект, призванный помочь туристам правильно и интересно посетить национальный парк «Куршская коса».</p>
       </section>
     </main>
   )

@@ -1,0 +1,42 @@
+.cookie-notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(270deg, #1E2E4D 0%, #4b6fb3 100%);
+  max-width: 60%;
+  height: 55px;
+  margin: 0 auto;
+}
+
+.notification_visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .1s linear, visibility .1s ease;
+}
+
+.notification_hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .1s linear, visibility .1s ease;
+}
+
+.cookie-notification__content {
+  color: #FFFFFF;
+}
+
+.cookie-notification__button {
+  font-size: 16px;
+  border: none;
+  padding: 8px 25px;
+  background-color: #FFFFFF;
+}
+
+.cookie-notification__button:hover {
+  cursor: pointer;
+  background-color: #dedede;
+}

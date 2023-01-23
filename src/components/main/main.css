@@ -1,5 +1,5 @@
 .main__intro {
-  height: 500px;
+  height: 700px;
   background: linear-gradient(90deg, #405f99 0%, #4b6fb3 100%);
   overflow: hidden;
 }
@@ -25,27 +25,17 @@
   display: flex;
   justify-content: center;
   gap: 100px;
-  padding-top: 25px;
+  padding-top: 70px;
 }
 
-.main__random-article,
-.main__facts {
-  width: 350px;
-  height: 400px;
-  background-color: #DFE1DB;
-}
-
-.main__facts {
+.main__map {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 25px;
-}
-
-.main__fact-content {
-  max-width: 70%;
-  text-align: center;
+  width: 70%;
+  margin: 60px auto;
+  gap: 50px;
 }
 
 .main__mission {

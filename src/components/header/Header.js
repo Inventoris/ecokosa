@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../images/logo.svg'
+import pathToLogo from '../../images/logo.svg'
 import './Header.css'
 
 function Header() {
@@ -25,7 +25,9 @@ function Header() {
   return (
     <header className="header">
       <div className="header__logo-wrapper">
-        <Link to="/"><img src={logo} className="header__logo" alt="Тёмно-синие деревья, между стволами следы лап животных" /></Link>
+        <Link to="/">
+          <img src={pathToLogo} className="header__logo" alt="Тёмно-синие деревья, между стволами следы лап животных" />
+        </Link>
         <div className="header__site-name">
           <p className="site-title">ЭкоКоса</p>
           <p className="site-subtitle">Гайд по Куршской косе</p>

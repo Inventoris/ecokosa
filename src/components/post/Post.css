@@ -1,0 +1,23 @@
+.post{
+  width: 500px;
+  height: 500px;
+  background-color: #DFE1DB;
+  color: #000000;
+  text-decoration-color: transparent;
+}
+
+.post:hover {
+  text-decoration-color: #000000;
+}
+
+.post__image-wrapper {
+  min-height: 70%;
+}
+
+.post__image {
+  width: 100%;
+}
+
+.post__title {
+  padding: 10px 25px;
+}

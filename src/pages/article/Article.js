@@ -8,18 +8,21 @@ function Article(props) {
   const [content, setContent] = useState('')
 
   useEffect(() => {
-    fetch(props.path)
+    fetch(props.source)
       .then(response => response.text())
       .then(text => setContent(text))
-      .catch(error => console.log(error))
+      .catch(console.error())
   })
 
   return (
     <>
       <Header />
-        <article className="article">
-          <ReactMarkdown children={content} />
+      <main className="content">
+        <article className="main__article">
+          <img src={props.cover.image} alt={props.cover.alt} />
+          <ReactMarkdown children={content} linkTarget={"_blank"} />
         </article>
+      </main>
       <Footer />
     </>
   )
