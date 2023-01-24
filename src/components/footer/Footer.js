@@ -11,9 +11,9 @@ function Footer() {
         </div>
         <nav className="footer__navigation">
           <ul className="footer__navigation-list">
-            <li><a href="http://www.park-kosa.ru/" target="_blank">Официальный сайт Куршской косы</a></li>
-            <li><a href="https://github.com/Inventoris/ecokosa" target="_blank">GitHub</a></li>
-            <li><a href="https://github.com/Inventoris/ecokosa/blob/main/LICENSE" target="_blank">Лицензия</a></li>
+            <li><a href="http://www.park-kosa.ru/" target="_blank" rel="noreferrer">Официальный сайт Куршской косы</a></li>
+            <li><a href="https://github.com/Inventoris/ecokosa" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://github.com/Inventoris/ecokosa/blob/main/LICENSE" target="_blank" rel="noreferrer">Лицензия</a></li>
           </ul>
         </nav>
       </div>
