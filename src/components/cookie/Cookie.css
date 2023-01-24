@@ -40,3 +40,20 @@
   cursor: pointer;
   background-color: #dedede;
 }
+
+@media (max-width: 1024px)  {
+  .cookie-notification {
+    height: 70px;
+    gap: 0;
+    max-width: 70%;
+  }
+
+  .cookie-notification__content {
+    padding: 5px 25px;
+  }
+
+  .cookie-notification__button {
+    padding: 5px 15px;
+    margin: 0 20px 0 10px;
+  }
+}

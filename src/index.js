@@ -28,7 +28,7 @@ root.render(
         <Route path="about" element={<Article source={pathToAbout} cover={{image: aboutCover, alt: 'Пляж на Куршской косе'}} />} />
         <Route path="sights" element={<Article source={pathToSights} cover={{image: sightsCover, alt: 'Смотровая вышка на фоне кустов и Куршского залива'}} />} />
         <Route path="restrictions" element={<Article source={pathToRestrictions} cover={{image: restrictionsCover, alt: 'Знак с предупреждением'}} />} />
-        <Route path="prices" element={<Article source={pathToPrices} cover={{image: pricesCover, alt: 'КПП при въезде на Куршскою косу'}}/>} />
+        <Route path="prices" element={<Article source={pathToPrices} cover={{image: pricesCover, alt: 'КПП при въезде на Куршскую косу'}}/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

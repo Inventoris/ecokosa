@@ -17,7 +17,7 @@ const covers = {
   prices: {
     pathToImage: 'checkpoint.jpg',
     pathToArticle: 'prices',
-    headerText: 'Сколько стоит посетить Куршскою косу и где купить билеты'
+    headerText: 'Сколько стоит посетить Куршскую косу и где купить билеты'
   }
 }
 

@@ -1,11 +1,17 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import pathToLogo from '../../images/logo.svg'
+import pathToMenuLogo from '../../images/menu-open.svg'
+import pathToCloseLogo from '../../images/menu-close.svg'
 import './Header.css'
 
 function Header() {
   useEffect(() => {
+    const body = document.querySelector('#root')
     const header = document.querySelector('.header')
+    const navItems = document.querySelectorAll('.header__navigation-list li')
+    const menuOpenLogo = document.querySelector('.header__menu-open')
+    const menuCloseLogo = document.querySelector('.header__menu-close')
 
     function headerSwitcher() {
       if (window.pageYOffset > 0) {
@@ -15,10 +21,24 @@ function Header() {
       }
     }
 
+    function menuLogoSwitcher() {
+      body.classList.toggle('menu-active')
+    }
+
+    function menuCleaner() {
+      body.classList.remove('menu-active')
+    }
+
     window.addEventListener('scroll', headerSwitcher)
+    navItems.forEach(item => item.addEventListener('click', menuCleaner))
+    menuOpenLogo.addEventListener('click', menuLogoSwitcher)
+    menuCloseLogo.addEventListener('click', menuLogoSwitcher)
 
     return () => {
       window.removeEventListener('scroll', headerSwitcher)
+      menuOpenLogo.removeEventListener('click', menuLogoSwitcher)
+      menuCloseLogo.removeEventListener('click', menuLogoSwitcher)
+      navItems.forEach(item => item.removeEventListener('click', menuCleaner))
     }
   })
 
@@ -41,6 +61,8 @@ function Header() {
           <li><Link to="/prices">Сколько стоит</Link></li>
         </ul>
       </nav>
+      <img src={pathToMenuLogo} className="header__menu-open" alt="Открыть меню" />
+      <img src={pathToCloseLogo} className="header__menu-close" alt="Закрыть меню" />
     </header>
   )
 }

@@ -33,7 +33,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
   margin: 60px auto;
   gap: 50px;
 }
@@ -54,4 +53,32 @@
 .main__mission-message {
   text-align: center;
   padding: 0 20px;
+}
+
+@media (max-width: 1024px)  {
+  .main__intro {
+    height: 950px;
+  }
+
+  .main__intro-marquee {
+    font-size: 18px;
+  }
+
+  .main__intro-knowledge {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main__map h2 {
+    text-align: center;
+  }
+
+  .main__map iframe {
+    width: auto;
+  }
+
+  .main__mission {
+    width: auto;
+    margin: 35px;
+  }
 }

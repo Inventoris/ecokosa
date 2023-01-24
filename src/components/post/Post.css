@@ -21,3 +21,14 @@
 .post__title {
   padding: 10px 25px;
 }
+
+@media (max-width: 1024px)  {
+  .post{
+    width: 350px;
+    height: 400px;
+  }
+
+  .post__image-wrapper {
+    min-height: 60%;
+  }
+}
