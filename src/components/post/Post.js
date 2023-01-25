@@ -17,7 +17,7 @@ function Post() {
   return (
     <Link to={covers[randomCover].pathToArticle} className="post">
       <div className="post__image-wrapper">
-        <img src={pathToImage} className="post__image" />
+        <img src={pathToImage} className="post__image" alt={covers[randomCover].imageAltText} />
       </div>
       <h2 className="post__title">{covers[randomCover].headerText}</h2>
     </Link>
