@@ -1,21 +1,16 @@
 {
-  "short_name": "ЭкоКоса",
-  "name": "ЭкоКоса — гайд по Куршской косе для туристов",
+  "name": "ЭкоКоса",
+  "description": "Гайд по Куршской косе",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "favicons/logo192.png",
+      "src": "favicons/192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "favicons/logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "favicons/384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
     }
   ],
   "display": "standalone",
