@@ -21,7 +21,7 @@ li {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration-style: wavy;
   text-decoration-thickness: 1px;
   text-decoration-color: transparent;
   transition: text-decoration-color .125s ease;
@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-  text-decoration-color: #FFFFFF;
+  text-decoration-color: #fcdd76;
   transition: text-decoration-color .125s ease;
 }
 

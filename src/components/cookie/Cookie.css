@@ -3,11 +3,9 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
-  position: fixed;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  background: linear-gradient(270deg, #1E2E4D 0%, #4b6fb3 100%);
+  position: sticky;
+  bottom: 1px;
+  background: #1E2E4D;
   max-width: 60%;
   height: 55px;
   margin: 0 auto;
@@ -32,7 +30,7 @@
 .cookie-notification__button {
   font-size: 16px;
   border: none;
-  padding: 8px 25px;
+  padding: 8px 20px;
   background-color: #FFFFFF;
 }
 

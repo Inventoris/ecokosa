@@ -9,8 +9,8 @@ function Home() {
     <>
       <Header />
       <Main />
-      <Footer />
       <Cookie />
+      <Footer />
     </>
   )
 }

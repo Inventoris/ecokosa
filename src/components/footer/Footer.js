@@ -13,7 +13,7 @@ function Footer() {
           <ul className="footer__navigation-list">
             <li><a href="http://www.park-kosa.ru/" target="_blank" rel="noreferrer">Официальный сайт Куршской косы</a></li>
             <li><a href="https://github.com/Inventoris/ecokosa" target="_blank" rel="noreferrer">GitHub</a></li>
-            <li><a href="https://github.com/Inventoris/ecokosa/blob/main/LICENSE" target="_blank" rel="noreferrer">Лицензия</a></li>
+            <li><a href="https://github.com/Inventoris/ecokosa/blob/main/LICENSE" target="_blank" rel="noreferrer">Лицензии</a></li>
           </ul>
         </nav>
       </div>

@@ -1,3 +1,7 @@
+.content {
+  min-height: 100vh;
+}
+
 .main__article {
   max-width: 850px;
   margin: 50px 0 120px 200px;
@@ -25,6 +29,7 @@
 .main__article a {
   color: #405f99;
   text-decoration-color: #405f99;
+  text-decoration-style: solid;
 }
 
 .main__article a:hover {

@@ -37,11 +37,34 @@
   gap: 50px;
 }
 
+.main__map iframe {
+  box-shadow: 0px 0px 15px #1E2E4D;
+}
+
+@keyframes paws {
+  25% {
+    background-image: url('../../images/paws-step-1.svg');
+  }
+  50% {
+    background-image: url('../../images/paws-step-2.svg');
+  }
+  75% {
+    background-image: url('../../images/paws-step-3.svg');
+  }
+  100% {
+    background-image: url('../../images/white-background.svg');
+  }
+}
+
 .main__mission {
   height: 250px;
   width: 70%;
   margin: 100px auto;
   background-color: #e5e5e5;
+  animation: paws infinite 4s ease-out .5s;
+  background-image: url('../../images/white-background.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 85%;
 }
 
 .main__mission-header {
@@ -52,7 +75,7 @@
 
 .main__mission-message {
   text-align: center;
-  padding: 0 20px;
+  padding: 0 70px;
 }
 
 @media (max-width: 1024px)  {

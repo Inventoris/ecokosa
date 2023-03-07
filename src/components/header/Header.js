@@ -44,25 +44,24 @@ function Header() {
 
   return (
     <header className="header">
-      <div className="header__logo-wrapper">
-        <Link to="/">
-          <img src={pathToLogo} className="header__logo" alt="Тёмно-синие деревья, между стволами следы лап животных" />
-        </Link>
-        <div className="header__site-name">
-          <p className="site-title">ЭкоКоса</p>
-          <p className="site-subtitle">Гайд по Куршской косе</p>
+      <div className="header__inner">
+        <div className="header__logo-wrapper">
+          <Link to="/" className="header__logo">
+            <img src={pathToLogo} loading="lazy" alt="Абстрактный рисунок двух песчаных дюн" />
+          </Link>
+          <p className="header__tagline">ЭкоКоса / гайд по Куршской косе</p>
         </div>
+        <nav className="header__navigation">
+          <ul className="header__navigation-list">
+            <li><Link to="/about">О косе</Link></li>
+            <li><Link to="/sights">Где гулять</Link></li>
+            <li><Link to="/restrictions">Куда нельзя</Link></li>
+            <li><Link to="/prices">Сколько стоит</Link></li>
+          </ul>
+        </nav>
+        <img src={pathToMenuLogo} className="header__menu-open" alt="Открыть меню" />
+        <img src={pathToCloseLogo} className="header__menu-close" alt="Закрыть меню" />
       </div>
-      <nav className="header__navigation">
-        <ul className="header__navigation-list">
-          <li><Link to="/about">О косе</Link></li>
-          <li><Link to="/sights">Где гулять</Link></li>
-          <li><Link to="/restrictions">Куда нельзя</Link></li>
-          <li><Link to="/prices">Сколько стоит</Link></li>
-        </ul>
-      </nav>
-      <img src={pathToMenuLogo} className="header__menu-open" alt="Открыть меню" />
-      <img src={pathToCloseLogo} className="header__menu-close" alt="Закрыть меню" />
     </header>
   )
 }

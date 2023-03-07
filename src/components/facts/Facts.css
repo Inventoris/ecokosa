@@ -1,10 +1,22 @@
 .facts {
+  position: relative;
   width: 500px;
   height: 350px;
   background-color: #DFE1DB;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.facts::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../images/info.svg);
 }
 
 .facts__content {

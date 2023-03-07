@@ -1,12 +1,7 @@
-<svg width="200" height="120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <symbol height="24" id="svg_3" width="24" xmlns="http://www.w3.org/2000/svg">
-      <path d="m14,21l0,-3.23l2,0l0,3.23l-2,0zm-6,0l0,-4l-6.12,0l3.97,-6l-1.93,0l5.08,-7.28l5.07,7.28l-1.92,0l3.98,6l-6.13,0l0,4l-2,0zm9.05,-4l-3.47,-5.22l1.97,0l-3.07,-4.4l2.52,-3.65l5.07,7.27l-1.92,0l3.98,6l-5.08,0z"/>
-    </symbol>
-  </defs>
-  <g class="layer">
-    <use fill="#1e2e4d" id="svg_4" transform="matrix(4.5 0 0 4.5 0 0)" x="-1.81" xlink:href="#svg_3" y="0"/>
-    <use fill="#1e2e4d" id="svg_5" transform="matrix(4.5 0 0 4.5 0 0)" x="8.78" xlink:href="#svg_3" y="1.82"/>
-    <use fill="#1e2e4d" id="svg_6" transform="matrix(4.5 0 0 4.5 0 0)" x="22.11" xlink:href="#svg_3" y="-1.06"/>
+<?xml version="1.0"?>
+<svg width="150" height="40" xmlns="http://www.w3.org/2000/svg" xmlnsSvg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <path d="m-47.4,38.71c185.06,-64.86 190.46,15.45 190.25,13.41c-0.2,-2.02 -190.25,-13.41 -190.25,-13.41z" fill="#fcdd76" id="svg_17" stroke="#000000"/>
+  <path d="m-14.52,44.99c180.31,-61.15 186.05,10.16 185.84,8.35c-0.21,-1.79 -185.84,-8.35 -185.84,-8.35z" fill="#fcdd76" id="svg_16" stroke="#000000"/>
  </g>
 </svg>
