@@ -1,15 +1,19 @@
 import Header from '../../components/header/Header'
 import Main from '../../components/main/Main'
 import Footer from '../../components/footer/Footer'
-import Cookie from '../../components/cookie/Cookie'
+import CookieBanner from '../../components/cookie/CookieBanner'
 import './Home.css'
 
-function Home() {
+const Home = () => {
+  const isNotify = () => {
+    return Boolean(localStorage.dateOfNotification)
+  }
+
   return (
     <>
       <Header />
       <Main />
-      <Cookie />
+      {isNotify() ? null : <CookieBanner />}
       <Footer />
     </>
   )

@@ -1,0 +1,15 @@
+.error-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message a {
+  color: #1E2E4D;
+  text-decoration-color: #000000;
+}
+
+.error-message a:hover {
+  text-decoration-color: transparent;
+}

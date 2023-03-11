@@ -16,15 +16,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
 }
 
 .footer__copyright-message {
   color: #FFFFFF;
   margin: 0;
+  width: 310px;
 }
 
-.footer__navigation-list {
+.footer__copyright-logo {
+  fill: #FFFFFF;
+}
+
+.footer__contacts-list {
   display: flex;
   gap: 50px;
   margin: 0;
@@ -46,7 +50,7 @@
     width: auto;
   }
 
-  .footer__navigation-list {
+  .footer__contacts-list {
     gap: 25px;
   }
 }

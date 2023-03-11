@@ -1,49 +1,76 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import pathToLogo from '../../images/logo.svg'
 import pathToMenuLogo from '../../images/menu-open.svg'
 import pathToCloseLogo from '../../images/menu-close.svg'
 import './Header.css'
 
-function Header() {
+const isMobile = () => {
+  return window.matchMedia('(max-width: 1024px)').matches
+}
+
+const Header = () => {
+  const header = React.createRef()
+
+  const navItems = [
+    {
+      id: 1,
+      text: 'О косе',
+      path: '/about'
+    },
+    {
+      id: 2,
+      text: 'Где гулять',
+      path: '/sights'
+    },
+    {
+      id: 3,
+      text: 'Куда нельзя',
+      path: '/restrictions'
+    },
+    {
+      id: 4,
+      text: 'Сколько стоит',
+      path: '/prices'
+    }
+  ]
+
+  const headerSwitcher = () => {
+    if (window.pageYOffset > 0) {
+      header.current.classList.add('header_narrowed')
+    } else {
+      header.current.classList.remove('header_narrowed')
+    }
+  }
+
+  const menuLogoSwitcher = () => {
+    header.current.classList.toggle('menu-active')
+  }
+
+  const menuCleaner = () => {
+    header.current.classList.remove('menu-active')
+  }
+
+  const navList = navItems.map(item =>
+    <li key={item.id}>
+      <Link to={item.path} onClick={menuCleaner}>{item.text}</Link>
+    </li>
+  )
+
   useEffect(() => {
-    const body = document.querySelector('#root')
-    const header = document.querySelector('.header')
-    const navItems = document.querySelectorAll('.header__navigation-list li')
-    const menuOpenLogo = document.querySelector('.header__menu-open')
-    const menuCloseLogo = document.querySelector('.header__menu-close')
-
-    function headerSwitcher() {
-      if (window.pageYOffset > 0) {
-        header.classList.add('header_narrowed')
-      } else {
-        header.classList.remove('header_narrowed')
-      }
-    }
-
-    function menuLogoSwitcher() {
-      body.classList.toggle('menu-active')
-    }
-
-    function menuCleaner() {
-      body.classList.remove('menu-active')
+    if (isMobile()) {
+      return
     }
 
     window.addEventListener('scroll', headerSwitcher)
-    navItems.forEach(item => item.addEventListener('click', menuCleaner))
-    menuOpenLogo.addEventListener('click', menuLogoSwitcher)
-    menuCloseLogo.addEventListener('click', menuLogoSwitcher)
 
     return () => {
       window.removeEventListener('scroll', headerSwitcher)
-      menuOpenLogo.removeEventListener('click', menuLogoSwitcher)
-      menuCloseLogo.removeEventListener('click', menuLogoSwitcher)
-      navItems.forEach(item => item.removeEventListener('click', menuCleaner))
     }
   })
 
   return (
-    <header className="header">
+    <header className={isMobile() ? "header header_narrowed" : "header"} ref={header}>
       <div className="header__inner">
         <div className="header__logo-wrapper">
           <Link to="/" className="header__logo">
@@ -52,15 +79,15 @@ function Header() {
           <p className="header__tagline">ЭкоКоса / гайд по Куршской косе</p>
         </div>
         <nav className="header__navigation">
-          <ul className="header__navigation-list">
-            <li><Link to="/about">О косе</Link></li>
-            <li><Link to="/sights">Где гулять</Link></li>
-            <li><Link to="/restrictions">Куда нельзя</Link></li>
-            <li><Link to="/prices">Сколько стоит</Link></li>
-          </ul>
+          <ul className="header__navigation-list">{navList}</ul>
         </nav>
-        <img src={pathToMenuLogo} className="header__menu-open" alt="Открыть меню" />
-        <img src={pathToCloseLogo} className="header__menu-close" alt="Закрыть меню" />
+        {isMobile() ?
+          <>
+            <img src={pathToMenuLogo} onTouchStart={menuLogoSwitcher} className="header__menu-open" alt="Открыть меню" />
+            <img src={pathToCloseLogo} onTouchStart={menuLogoSwitcher} className="header__menu-close" alt="Закрыть меню" />
+          </>
+          : null
+        }
       </div>
     </header>
   )

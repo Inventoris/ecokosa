@@ -5,6 +5,9 @@ body {
   padding-top: 130px;
   background-color: #f5f6f7;
 }
+main {
+  min-height: 100vh;
+}
 
 h1 {
   font-size: 35px;
@@ -21,16 +24,13 @@ li {
 }
 
 a {
-  text-decoration-style: wavy;
-  text-decoration-thickness: 1px;
-  text-decoration-color: transparent;
+  text-decoration: underline 1px wavy transparent;
   transition: text-decoration-color .125s ease;
   color: #FFFFFF;
 }
 
 a:hover {
   text-decoration-color: #fcdd76;
-  transition: text-decoration-color .125s ease;
 }
 
 @media (max-width: 1024px)  {

@@ -2,26 +2,44 @@ import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
 import ReactMarkdown from 'react-markdown'
 import { useEffect, useState } from 'react'
+import covers from '../../guides/covers'
 import './Article.css'
 
-function Article(props) {
-  const [content, setContent] = useState('')
+const Article = ({ title }) => {
+  const [content, setContent] = useState()
 
   useEffect(() => {
-    fetch(props.source)
-      .then(response => response.text())
-      .then(text => setContent(text))
-      .catch(console.error())
-  })
+    const articleParts = [
+      import(`../../guides/${title}/${covers[title].imageName}`),
+      import(`../../guides/${title}/${title}.md`)
+    ]
+
+    Promise.all(articleParts)
+      .then(([image, text]) => {
+        fetch(text.default)
+          .then(response => response.text())
+          .then(text => setContent({
+            text: text,
+            image: image.default,
+            alt: covers[title].imageAltText
+          }))
+          .catch(error => console.error(`Ошибка формирования статейных частей: ${error}`))
+      })
+      .catch(error => console.error(`Ошибка поиска статейных частей: ${error}`))
+  }, [title])
 
   return (
     <>
       <Header />
-      <main className="content">
-        <article className="main__article">
-          <img src={props.cover.image} alt={props.cover.alt} />
-          <ReactMarkdown children={content} linkTarget={"_blank"} />
-        </article>
+      <main className="main">
+        {content &&
+          <article className="main__article">
+            <div className="main__article-image">
+              <img src={content.image} alt={content.alt} />
+            </div>
+            <ReactMarkdown children={content.text} linkTarget={"_blank"} />
+          </article>
+        }
       </main>
       <Footer />
     </>

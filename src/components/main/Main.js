@@ -1,8 +1,12 @@
-import Post from '../post/Post'
-import Facts from '../facts/Facts'
+import Post from './post/Post'
+import Facts from './facts/Facts'
 import './Main.css'
 
-function Main() {
+export const getRandomItem = (items) => {
+  return items[Math.floor(Math.random() * items.length)]
+}
+
+const Main = () => {
   return (
     <main className="main">
       <section className="main__intro">

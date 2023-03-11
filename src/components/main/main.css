@@ -52,7 +52,7 @@
     background-image: url('../../images/paws-step-3.svg');
   }
   100% {
-    background-image: url('../../images/white-background.svg');
+    background-image: url('../../images/paws-step-0.svg');
   }
 }
 
@@ -62,7 +62,7 @@
   margin: 100px auto;
   background-color: #e5e5e5;
   animation: paws infinite 4s ease-out .5s;
-  background-image: url('../../images/white-background.svg');
+  background-image: url('../../images/paws-step-0.svg');
   background-repeat: no-repeat;
   background-position: 50% 85%;
 }
@@ -103,5 +103,9 @@
   .main__mission {
     width: auto;
     margin: 35px;
+  }
+
+  .main__mission-message {
+    padding: 0 30px;
   }
 }

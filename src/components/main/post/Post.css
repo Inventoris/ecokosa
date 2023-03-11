@@ -1,0 +1,48 @@
+.post{
+  width: 500px;
+  height: 500px;
+  background-color: #DFE1DB;
+}
+
+.post__link,
+.post__link:hover {
+  color: #000000;
+  text-decoration-color: transparent;
+}
+
+.post__image-wrapper {
+  min-height: 70%;
+}
+
+.post__image {
+  width: 100%;
+}
+
+.post__title {
+  padding: 5px 25px 15px;
+  margin: 0;
+  text-decoration: underline 1px wavy transparent;
+  transition: text-decoration-color .125s ease;
+}
+
+.post__link:hover .post__title {
+  text-decoration-color: #000000;
+}
+
+.post__subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0 25px;
+  margin: 0;
+}
+
+@media (max-width: 1024px)  {
+  .post{
+    width: 350px;
+    height: 400px;
+  }
+
+  .post__image-wrapper {
+    min-height: 60%;
+  }
+}
