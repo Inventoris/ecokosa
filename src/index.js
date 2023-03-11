@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom/dist/index.js'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home/Home.js'
 import Article from './pages/article/Article.js'
-import RouteErrorPage from './pages/error/RouteErrorPage.js'
+import RouteErrorPage from './pages/routeError/RouteErrorPage.js'
 import reportWebVitals from './reportWebVitals'
 import './index.css'
 

@@ -33,6 +33,33 @@ a:hover {
   text-decoration-color: #fcdd76;
 }
 
+.error-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.error-message a {
+  color: #1E2E4D;
+  text-decoration-color: #000000;
+}
+
+.error-message a:hover {
+  text-decoration-color: transparent;
+}
+
+.error-message code {
+  color: #FFFFFF;
+  background-color: #ff0000;
+  padding: 5px;
+}
+
+.error-message pre {
+  font-size: 30px;
+}
+
 @media (max-width: 1024px)  {
   body {
     font-size: 14px;

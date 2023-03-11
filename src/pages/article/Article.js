@@ -1,5 +1,6 @@
 import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
+import ErrorBoundary from '../../components/errorBoundary/ErrorBoundary'
 import ReactMarkdown from 'react-markdown'
 import { useEffect, useState } from 'react'
 import covers from '../../guides/covers'
@@ -30,18 +31,24 @@ const Article = ({ title }) => {
 
   return (
     <>
-      <Header />
-      <main className="main">
-        {content &&
-          <article className="main__article">
-            <div className="main__article-image">
-              <img src={content.image} alt={content.alt} />
-            </div>
-            <ReactMarkdown children={content.text} linkTarget={"_blank"} />
-          </article>
-        }
-      </main>
-      <Footer />
+      <ErrorBoundary>
+        <Header />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <main className="main">
+          {content &&
+            <article className="main__article">
+              <div className="main__article-image">
+                <img src={content.image} alt={content.alt} />
+              </div>
+              <ReactMarkdown children={content.text} linkTarget={"_blank"} />
+            </article>
+          }
+          </main>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Footer />
+      </ErrorBoundary>
     </>
   )
 }
