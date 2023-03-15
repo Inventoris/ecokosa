@@ -17,6 +17,7 @@
   display: flex;
   justify-content: space-between;
   padding: 24px 150px;
+  transition: padding .25s ease;
 }
 
 .header__logo-wrapper {
@@ -37,6 +38,10 @@
   font-size: 18px;
   margin: 5px 0 0 0;
   user-select: none;
+}
+
+.header_narrowed .header__inner {
+  padding: 17px 150px;
 }
 
 .header_narrowed .header__logo-wrapper {
@@ -90,8 +95,8 @@
     height: 70px;
   }
 
-  .header__inner {
-    padding: 12px;
+  .header_narrowed .header__inner {
+    padding: 15px;
   }
 
   .header__logo,

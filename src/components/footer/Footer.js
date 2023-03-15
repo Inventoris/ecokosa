@@ -1,28 +1,35 @@
+import { useMemo } from 'react'
 import './Footer.css'
 
 const Footer = () => {
-  const contactsItems = [
-    {
-      id: 1,
-      path: 'http://www.park-kosa.ru/',
-      text: 'Официальный сайт Куршской косы'
+  const contacts = useMemo(
+    () => {
+      const contactsItems = [
+        {
+          id: 1,
+          path: 'http://www.park-kosa.ru/',
+          text: 'Официальный сайт Куршской косы'
+        },
+        {
+          id: 2,
+          path: 'https://github.com/Inventoris/ecokosa',
+          text: 'GitHub'
+        },
+        {
+          id: 3,
+          path: 'https://github.com/Inventoris/ecokosa/blob/main/LICENSE',
+          text: 'Лицензии'
+        }
+      ]
+
+      return contactsItems.map(contact =>
+        <li key={contact.id}>
+          <a href={contact.path} target="_blank" rel="noreferrer">{contact.text}</a>
+        </li>
+      )
     },
-    {
-      id: 2,
-      path: 'https://github.com/Inventoris/ecokosa',
-      text: 'GitHub'
-    },
-    {
-      id: 3,
-      path: 'https://github.com/Inventoris/ecokosa/blob/main/LICENSE',
-      text: 'Лицензии'
-    }
-  ]
-  const contacts = contactsItems.map(contact =>
-      <li key={contact.id}>
-        <a href={contact.path} target='_blank' rel='noreferrer'>{contact.text}</a>
-      </li>
-    )
+    []
+  )
 
   return (
     <footer className="footer">
