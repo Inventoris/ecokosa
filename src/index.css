@@ -25,12 +25,24 @@ li {
 
 a {
   text-decoration: underline 1px wavy transparent;
+  text-underline-offset: 5px;
   transition: text-decoration-color .125s ease;
   color: #FFFFFF;
 }
 
 a:hover {
   text-decoration-color: #fcdd76;
+}
+
+button {
+  font-size: 16px;
+  border: none;
+  transition: box-shadow .125s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 4px 0 #fcdd76;
 }
 
 .error-message {

@@ -1,13 +1,12 @@
 .cookie-notification {
-  --notify-height: 50px;
+  --notify-height: 55px;
   --mobile-notify-height: 70px;
-  --notify-bottom-space: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 35px;
   position: sticky;
-  bottom: var(--notify-bottom-space);
+  bottom: 0;
   color: #FFFFFF;
   background-color: #1E2E4D;
   max-width: 60%;
@@ -20,25 +19,20 @@
 }
 
 .cookie-notification__button {
-  font-size: 16px;
-  border: none;
   padding: 8px 20px;
-  background-color: #FFFFFF;
-}
-
-.cookie-notification__button:hover {
-  cursor: pointer;
-  background-color: #dedede;
 }
 
 .about-cookie {
+  color: #000000;
+  background-color: #DFE1DB;
   height: 70px;
-  bottom: calc(var(--notify-height) + var(--notify-bottom-space));
-  border-bottom: 2px dashed #fcdd76;
+  bottom: var(--notify-height);
+  outline: 1px dashed #000000;
 }
 
 .about-cookie__content {
   text-align: center;
+  padding: 0 100px;
   margin: 0;
 }
 
@@ -65,7 +59,7 @@
   }
 
   .about-cookie {
-    bottom: calc(var(--mobile-notify-height) + var(--notify-bottom-space));
+    bottom: var(--mobile-notify-height);
   }
 
   .about-cookie__content {

@@ -14,14 +14,10 @@ const Header = () => {
   const header = React.createRef()
 
   const headerSwitcher = () => {
-    if (!header.current) {
-      return
-    }
-
     if (window.pageYOffset > 0) {
-      header.current.classList.add('header_narrowed')
+      header.current?.classList.add('header_narrowed')
     } else {
-      header.current.classList.remove('header_narrowed')
+      header.current?.classList.remove('header_narrowed')
     }
   }
 
