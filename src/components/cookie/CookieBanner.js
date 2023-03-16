@@ -20,9 +20,13 @@ const CookieBanner = ({ dispatch }) => {
 
   return (
     <div className="cookie-notification">
-      <p className="cookie-notification__content">Для работы сайта мы используем куки 🍪</p>
-      <button className="cookie-notification__button" onClick={onAccept}>Ок</button>
-      <button className="detail-button" onClick={onDetail}>?</button>
+      <div className="cookie-notification__inner">
+        <p className="cookie-notification__content">Для работы сайта мы используем куки 🍪</p>
+        <div className="cookie-notification__buttons-wrapper">
+          <button className="cookie-notification__button" onClick={onAccept}>Ок</button>
+          <button className="detail-button" onClick={onDetail}>?</button>
+        </div>
+      </div>
     </div>
   )
 }

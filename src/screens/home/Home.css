@@ -42,7 +42,7 @@
 }
 
 .main__mission {
-  height: 250px;
+  height: 300px;
   width: 70%;
   margin: 100px auto;
   background-color: #e5e5e5;
@@ -55,6 +55,7 @@
 }
 
 .main__mission-message {
+  line-height: 1.4;
   text-align: center;
   padding: 0 70px;
 }
@@ -83,6 +84,7 @@
 
   .main__mission {
     width: auto;
+    height: 320px;
     margin: 35px;
   }
 
