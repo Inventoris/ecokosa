@@ -13,7 +13,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 35px;
-  padding: 13px 80px;
+  padding: 14px 150px;
 }
 
 .cookie-notification__content {
@@ -27,7 +27,7 @@
 }
 
 .cookie-notification__button {
-  padding: 10px 30px;
+  padding: 10px 22px;
 }
 
 .about-cookie {
@@ -40,13 +40,13 @@
 
 .about-cookie__content {
   text-align: center;
-  padding: 11px 100px;
+  padding: 11px 150px;
   margin: 0;
 }
 
 .detail-button {
-  width: 32px;
   height: 32px;
+  width: 32px;
 }
 
 @media (max-width: 1024px)  {
